@@ -1,0 +1,21 @@
+body {
+	font-family: 'Roboto', sans-serif;
+    background-attachment: scroll; 
+    background-repeat: no-repeat;
+    background-position: 500px 500px;   
+    color: aquamarine; 
+    
+}
+
+
+
+
+#logo{
+    color-interpolation-filters: auto;
+    background-position: 50px 50px;
+}
+
+
+.ikea{
+    color: lightblue;
+}

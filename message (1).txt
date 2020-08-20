@@ -1,0 +1,65 @@
+ public function envoyeMailRecommandation()
+    {
+
+
+        $dataRecues = $this->input->post();
+
+        $rulesArray = array(
+            array(
+                'field' => 'registerNomReco',
+                'label' => 'Nom',
+                'rules' => 'trim|encode_php_tags|required'
+            ),
+            array(
+                'field' => 'registerPrenomReco',
+                'label' => 'Prénom',
+                'rules' => 'trim|encode_php_tags|required'
+            ),
+            array(
+                'field' => 'registerSociete',
+                'label' => 'Société',
+                'rules' => 'trim|required|encode_php_tags'
+            ),
+            array(
+                'field' => 'registerEmployeur',
+                'label' => 'Employeur',
+                'rules' => 'trim|encode_php_tags|required'
+            ),
+            array(
+                'field' => 'registerMessageReco',
+                'label' => 'Message',
+                'rules' => 'trim|required|encode_php_tags|min_length[10]'
+            )
+
+        );
+        $this->form_validation->set_rules($rulesArray);
+
+        if ($this->form_validation->run() === FALSE) {
+            //echo 'Erreur';
+            $errorsArray = $this->form_validation->get_all_errors();
+
+            header('Content-type:application/json');
+            echo json_encode(array(
+                'error' => $errorsArray
+            ));
+
+        } else {
+
+            date_default_timezone_set('Europe/Paris');
+
+            $data['Societe'] = $this->input->post('registerSociete');
+            $data['Employeur'] = $this->input->post('registerEmployeur');
+            $data['Message'] = $this->input->post('registerMessageReco');
+            $data['Nom'] = $this->input->post('registerNomReco');
+            $data['Prenom'] = $this->input->post('registerPrenomReco');
+            $data['Date_Create'] = date("Y-m-d H:i:s");
+
+
+            header('Content-type:application/json');
+
+            echo json_encode(array(
+                'success' => 'Votre Message a bien été envoyé'
+            ));
+
+            $this->db->insert('recommandation', $data);
+        }
