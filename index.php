@@ -47,6 +47,8 @@ switch ($_GET['page']) {
   <meta name="author" content="">
 
   <title>PORTFOLIO - MARTIN BISSIRIOU Theme</title>
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
   <!-- Custom fonts for this theme -->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -80,7 +82,10 @@ switch ($_GET['page']) {
             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="form.php">Contact</a>
           </li>
           <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="Rapportpro.docx">RAPPORT D'EXPERIENCE PROFESSIONNEL</a>
+            <!-- integrate boostrap css in progress... -->
+           <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+            <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="Rapportpro.html">RAPPORT D'EXPERIENCE PROFESSIONNEL</a>
           </li>
         </ul>
       </div>
@@ -585,6 +590,12 @@ Windows Server 2019.</p>
   <!-- Custom scripts for this template -->
   <script src="js/freelancer.min.js"></script>
 
+
+
+  <!-- scriptjs -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 </body>
 
 </html>

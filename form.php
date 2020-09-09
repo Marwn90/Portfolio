@@ -1,3 +1,5 @@
+<p><a href="index.php">- Retour vers l'acceuil</a></p>
+<link rel="stylesheet" type="text/css" href="portfolio.css">
 <?php include("connectbdd.php") ?>
 <?php include("register.php") ?>
 
